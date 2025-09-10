@@ -1,37 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-04T14:51:25.992636" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Web Title" source="C:\automation_challenge\robot_framework\test_web_title.robot">
-<test id="s1-t1" name="Verify Webpage Title" line="10">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-10T09:21:51.797100" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Form Submission" source="C:\automation_challenge\robot_framework\test_form_submission.robot">
+<test id="s1-t1" name="Verify Search Form Submission" line="16">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-04T14:51:26.375446" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<msg time="2025-09-10T09:21:52.062025" level="INFO">Opening browser 'Chrome' to base url 'https://www.ask.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-04T14:51:26.375135" elapsed="2.589779"/>
+<status status="PASS" start="2025-09-10T09:21:52.061547" elapsed="1.557329"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-09-04T14:51:29.237125" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-09-04T14:51:29.237862" level="FAIL">Title should have been 'google' but was 'Google'.</msg>
-<arg>${EXPECTED_TITLE}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2025-09-04T14:51:28.965567" elapsed="0.278025">Title should have been 'google' but was 'Google'.</status>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-10T09:21:53.627454" elapsed="2.340740"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-09-10T09:21:55.986099" level="INFO">Current page contains element 'css=input[aria-label='Search']'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-09-10T09:21:55.969687" elapsed="0.016517"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-10T09:21:55.986687" level="INFO">Locator css=input[aria-label='Search'] found successfully</msg>
+<arg>Locator ${SEARCH_INPUT} found successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-10T09:21:55.986493" elapsed="0.000244"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T09:21:55.987138" level="INFO">Typing text 'Test Automation' into text field 'css=input[aria-label='Search']'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T09:21:55.986925" elapsed="0.421454"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-09-10T09:21:56.411407" level="INFO">Sending key(s) ('ENTER',) to css=input[aria-label='Search'] element.</msg>
+<msg time="2025-09-10T09:21:56.823158" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-09-10T09:21:56.823300" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-09-10T09:21:56.409085" elapsed="1.964602"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${SEARCH_TERM}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-10T09:21:58.374179" elapsed="0.047733"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-09-10T09:21:58.426781" level="INFO">${current_title} = Test Automation, www.ask.com</msg>
+<var>${current_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-09-10T09:21:58.422314" elapsed="0.004517"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-10T09:21:58.427381" level="INFO">Actual title: Test Automation, www.ask.com</msg>
+<arg>Actual title: ${current_title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-10T09:21:58.427157" elapsed="0.000284"/>
+</kw>
+<kw name="Verify Search Results" owner="search_utils">
+<arg>${SEARCH_TERM}</arg>
+<status status="PASS" start="2025-09-10T09:21:58.427792" elapsed="0.032172"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-04T14:51:29.244150" elapsed="2.210310"/>
+<status status="PASS" start="2025-09-10T09:21:58.460396" elapsed="2.527927"/>
 </kw>
-<status status="FAIL" start="2025-09-04T14:51:26.374076" elapsed="5.080704">Title should have been 'google' but was 'Google'.</status>
+<status status="PASS" start="2025-09-10T09:21:52.059685" elapsed="8.929308"/>
 </test>
-<status status="FAIL" start="2025-09-04T14:51:25.993898" elapsed="5.462050"/>
+<status status="PASS" start="2025-09-10T09:21:51.798464" elapsed="9.196330"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test Web Title" id="s1" pass="0" fail="1" skip="0">Test Web Title</stat>
+<stat name="Test Form Submission" id="s1" pass="1" fail="0" skip="0">Test Form Submission</stat>
 </suite>
 </statistics>
 <errors>
