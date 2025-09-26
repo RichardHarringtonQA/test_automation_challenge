@@ -21,13 +21,11 @@ This repository contains a beginner-level test automation project to demonstrate
 
 ## Running the Tests
 - **Py Unit Test**: 
-- cleanse log file (optional)
-- 	echo. > test_log.log
-- execute via:
-- 	py -3 -m unittest test_tle_validator -v
-- python launcher : version 3.x modern features : run module as script : module name : dot path package/directory.test_file_name : verbose test name and result status output
-- **Web Test**: Run 		`robot robot_tests/test_web_title.robot`
-- **API Test**: Import 		`postman/api_test_challenge.postman_collection.json` into Postman and send the request.
+- cleanse log file (optional) `echo. > test_log.log`
+- execute via: `py -3 -m unittest test_tle_validator -v`
+- 		python launcher : version 3.x modern features : run module as script : module name : dot path package/directory.test_file_name : verbose test name and result status output
+- **Web Test**: Run `robot robot_tests/test_web_title.robot`
+- **API Test**: Import `postman/api_test_challenge.postman_collection.json` into Postman and send the request.
 
 ## Results
 - Py Unit Test results saved in 'test_log.log' (appended per run, pre run cleanse optional)
