@@ -20,12 +20,17 @@ This repository contains a beginner-level test automation project to demonstrate
 3. Ensure ChromeDriver is in your system PATH or project folder.
 
 ## Running the Tests
-- **Py Unit Test**: Run `py .\space_tests\test_tle_validator.py`
+- **Py Unit Test**: 
+	# cleanse log file (optional)
+	# echo. > test_log.log
+	# execute via:
+	# py -3 -m unittest test_tle_validator -v
+	# python launcher : version 3.x modern features : run module as script : module name : dot path package/directory.test_file_name : verbose test name and result status output
 - **Web Test**: Run `robot robot_tests/test_web_title.robot`
 - **API Test**: Import `postman/api_test_challenge.postman_collection.json` into Postman and send the request.
 
 ## Results
-- Py Unit Test results output in console (#upgrade to logging for permanence)
+- Py Unit Test results saved in 'test_log.log' (appended per run, pre run cleanse optional)
 - Web test results are saved in `output.xml` and `report.html`.
 - API test results are visible in Postman’s Test Results tab.
 
