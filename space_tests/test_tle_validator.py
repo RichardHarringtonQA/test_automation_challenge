@@ -3,13 +3,14 @@ import re
 import logging
 import time
 import atexit
-import argparse
 
-# cleanse log file (optional)
-# echo. > test_log.log
-# execute via:
-# py -3 -m unittest test_tle_validator -v
-# python launcher : version 3.x modern features : run module as script : module name : dot path package/directory.test_file_name : verbose test name and result status output
+"""
+cleanse log file (optional)
+echo. > test_log.log
+execute via:
+py -3 -m unittest test_tle_validator -v
+python launcher : version 3.x modern features : run module as script : module name : dot path package/directory.test_file_name : verbose test name and result status output
+"""
 
 # configure logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -21,22 +22,16 @@ logger.addHandler(file_handler)
 
 # log header
 run_timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
-logger.info(f"--- START OF RUN - {run_timestamp} --")
+logger.info(f"---  START OF RUN - {run_timestamp}  ---")
 
 # log footer
 def log_footer():
     run_timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
-    logger.info(f"--- END OF RUN - {run_timestamp} --\n")
+    logger.info(f"---  END OF RUN - {run_timestamp}  ---\n")
 atexit.register(log_footer)
 
+
 def validate_tle(line1, line2):
-    """
-    Original function: Validate TLE data.
-    - line1: Starts with satellite number (5 digits), after line number.
-    - line2: Eccentricity < 1.0 (valid orbit).
-    Returns True if valid, False otherwise.
-    """
-    
     logger.debug("Check line1: length == 69...")
     if len(line1) != 69 :
         logger.error("  Failed: Line 1 length !=69") # debug output
@@ -57,8 +52,8 @@ def validate_tle(line1, line2):
     
     logger.debug("Check line2: eccentricity (5th token) < 1.0")
     """
-    flexible token extraction
-    may not be ideal solution as tokens are expedted to be fixed positions within given strings
+    # flexible token extraction
+    # may not be ideal solution as tokens are expected to be at fixed positions within given strings
     # extract the 5th token
     ecc_str = re.search(r"^.+?\s+.+?\s+.+?\s+.+?\s+(.+?)\s", line2)
     logger.debug(ecc_str) # the whole capture
@@ -66,7 +61,7 @@ def validate_tle(line1, line2):
     """
     # extract fixed position value
     ecc_str_set = line2[26:33].strip()
-    # debug    logger.debug (f"extracted val: {ecc_str_set}") # logger.debug fixed length capture
+    # debug    logger.debug (f"extracted val: {ecc_str_set}") # debug fixed length capture
     # note this is a string capture, must make it number for comparison purposes
     try:
         ecc_val = float(ecc_str_set) # string to number
@@ -82,7 +77,7 @@ def validate_tle(line1, line2):
     except ValueError:
         logger.error("  Failed: could not convert extracted string to float value")
         return False
-    
+
     
 class TestTLEValidator(unittest.TestCase):
     def test_valid_tle(self):
