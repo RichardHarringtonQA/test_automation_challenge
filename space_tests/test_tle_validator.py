@@ -3,6 +3,7 @@ import re
 import logging
 import time
 import atexit
+import sqlite3
 
 """
 cleanse log file (optional)
@@ -38,6 +39,7 @@ def validate_tle(line1, line2):
         logger.error("  Failed: Line 1 length !=69") # debug output
         return False
     else:
+        line1length = 69
         logger.debug("  Pass: Length = 69")
     # Validate checksum
     # last position (68) is modulo 10 checksum value
@@ -86,7 +88,6 @@ def validate_tle(line1, line2):
         logger.debug(f"  Fail: invalid epoch day {epoch_day}")
         return False    
     
-    
     logger.debug("Check line2: eccentricity (5th token) < 1.0")
     """
     # flexible token extraction
@@ -114,6 +115,17 @@ def validate_tle(line1, line2):
     except ValueError:
         logger.error("  Failed: could not convert extracted string to float value")
         return False
+        
+    # make a temp SQL table
+    with sqlite3.connect(':memory:') as myDB:
+        myDB.execute('CREATE TABLE TLE_Values (line1length int, line1checkSumVal int, line1checkSumCalc int, satNum TEXT, epochYr int, epochDay int, line2Ecc TEXT)')
+        # insert extracted values
+        myDB.execute('INSERT INTO TLE_Values (line1length, line1checkSumVal, line1checkSumCalc, satNum, epochYr, epochDay, line2Ecc) VALUES (?, ?, ?, ?, ?, ?, ?)', (line1length, initial_digit, calc_digit, sat_num, epoch_year, epoch_day, ecc_str_set))
+        # output table values
+        cursor = myDB.execute('SELECT * FROM TLE_Values;')
+        result = cursor.fetchall()
+        logger.debug(f"SQL result: {result}")
+        return bool(result)
 
     
 class TestTLEValidator(unittest.TestCase):
