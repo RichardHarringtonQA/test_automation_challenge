@@ -1,61 +1,27 @@
  
-2025-09-26 12:04:54,835 - INFO - --- START OF RUN - 2025-09-26 12:04:54 --
-2025-09-26 12:04:54,847 - DEBUG - ***test2***
-2025-09-26 12:04:54,847 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:54,847 - DEBUG -   Pass: Length = 69
-2025-09-26 12:04:54,847 - DEBUG - Check line 1 starts with 5-digit number after line number...
-2025-09-26 12:04:54,847 - DEBUG -   Pass: Sat num = 25544
-2025-09-26 12:04:54,847 - DEBUG - Check line2: eccentricity (5th token) < 1.0
-2025-09-26 12:04:54,847 - ERROR -   Failed: Eccentricity 2.12345 is invalid
-2025-09-26 12:04:54,848 - DEBUG - ***test3***
-2025-09-26 12:04:54,848 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:54,848 - ERROR -   Failed: Line 1 length !=69
-2025-09-26 12:04:54,848 - DEBUG - ***test1***
-2025-09-26 12:04:54,848 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:54,848 - DEBUG -   Pass: Length = 69
-2025-09-26 12:04:54,848 - DEBUG - Check line 1 starts with 5-digit number after line number...
-2025-09-26 12:04:54,848 - DEBUG -   Pass: Sat num = 25544
-2025-09-26 12:04:54,848 - DEBUG - Check line2: eccentricity (5th token) < 1.0
-2025-09-26 12:04:54,849 - DEBUG -   Pass: Eccentricity 1234.0 < 1
-2025-09-26 12:04:54,850 - INFO - --- END OF RUN - 2025-09-26 12:04:54 --
-
-2025-09-26 12:04:55,963 - INFO - --- START OF RUN - 2025-09-26 12:04:55 --
-2025-09-26 12:04:55,976 - DEBUG - ***test2***
-2025-09-26 12:04:55,976 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:55,976 - DEBUG -   Pass: Length = 69
-2025-09-26 12:04:55,976 - DEBUG - Check line 1 starts with 5-digit number after line number...
-2025-09-26 12:04:55,976 - DEBUG -   Pass: Sat num = 25544
-2025-09-26 12:04:55,976 - DEBUG - Check line2: eccentricity (5th token) < 1.0
-2025-09-26 12:04:55,976 - ERROR -   Failed: Eccentricity 2.12345 is invalid
-2025-09-26 12:04:55,977 - DEBUG - ***test3***
-2025-09-26 12:04:55,977 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:55,977 - ERROR -   Failed: Line 1 length !=69
-2025-09-26 12:04:55,977 - DEBUG - ***test1***
-2025-09-26 12:04:55,977 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:55,977 - DEBUG -   Pass: Length = 69
-2025-09-26 12:04:55,977 - DEBUG - Check line 1 starts with 5-digit number after line number...
-2025-09-26 12:04:55,977 - DEBUG -   Pass: Sat num = 25544
-2025-09-26 12:04:55,977 - DEBUG - Check line2: eccentricity (5th token) < 1.0
-2025-09-26 12:04:55,977 - DEBUG -   Pass: Eccentricity 1234.0 < 1
-2025-09-26 12:04:55,979 - INFO - --- END OF RUN - 2025-09-26 12:04:55 --
-
-2025-09-26 12:04:56,888 - INFO - --- START OF RUN - 2025-09-26 12:04:56 --
-2025-09-26 12:04:56,899 - DEBUG - ***test2***
-2025-09-26 12:04:56,899 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:56,899 - DEBUG -   Pass: Length = 69
-2025-09-26 12:04:56,899 - DEBUG - Check line 1 starts with 5-digit number after line number...
-2025-09-26 12:04:56,900 - DEBUG -   Pass: Sat num = 25544
-2025-09-26 12:04:56,900 - DEBUG - Check line2: eccentricity (5th token) < 1.0
-2025-09-26 12:04:56,900 - ERROR -   Failed: Eccentricity 2.12345 is invalid
-2025-09-26 12:04:56,901 - DEBUG - ***test3***
-2025-09-26 12:04:56,902 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:56,902 - ERROR -   Failed: Line 1 length !=69
-2025-09-26 12:04:56,903 - DEBUG - ***test1***
-2025-09-26 12:04:56,903 - DEBUG - Check line1: length == 69...
-2025-09-26 12:04:56,904 - DEBUG -   Pass: Length = 69
-2025-09-26 12:04:56,904 - DEBUG - Check line 1 starts with 5-digit number after line number...
-2025-09-26 12:04:56,904 - DEBUG -   Pass: Sat num = 25544
-2025-09-26 12:04:56,905 - DEBUG - Check line2: eccentricity (5th token) < 1.0
-2025-09-26 12:04:56,906 - DEBUG -   Pass: Eccentricity 1234.0 < 1
-2025-09-26 12:04:56,913 - INFO - --- END OF RUN - 2025-09-26 12:04:56 --
+2025-09-26 16:30:13,621 - INFO - ---  START OF RUN - 2025-09-26 16:30:13  ---
+2025-09-26 16:30:13,622 - DEBUG - ***test2***
+2025-09-26 16:30:13,622 - DEBUG - Check line1: length == 69...
+2025-09-26 16:30:13,622 - DEBUG -   Pass: Length = 69
+2025-09-26 16:30:13,622 - DEBUG - Expected value: 9
+2025-09-26 16:30:13,623 - DEBUG - Calculated value: 1
+2025-09-26 16:30:13,623 - DEBUG -   Fail: checksum expected 9 != calculated 1
+2025-09-26 16:30:13,623 - DEBUG - ***test3***
+2025-09-26 16:30:13,623 - DEBUG - Check line1: length == 69...
+2025-09-26 16:30:13,623 - ERROR -   Failed: Line 1 length !=69
+2025-09-26 16:30:13,624 - DEBUG - ***test1***
+2025-09-26 16:30:13,624 - DEBUG - Check line1: length == 69...
+2025-09-26 16:30:13,624 - DEBUG -   Pass: Length = 69
+2025-09-26 16:30:13,624 - DEBUG - Expected value: 0
+2025-09-26 16:30:13,624 - DEBUG - Calculated value: 0
+2025-09-26 16:30:13,624 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-26 16:30:13,624 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-26 16:30:13,624 - DEBUG -   Pass: Sat num = 00011
+2025-09-26 16:30:13,625 - DEBUG - Check Line 1 epoch year and day...
+2025-09-26 16:30:13,625 - DEBUG - 25266.56989994
+2025-09-26 16:30:13,625 - DEBUG -   Pass: valid epoch year 25
+2025-09-26 16:30:13,625 - DEBUG -   Pass: valid epoch day 266
+2025-09-26 16:30:13,625 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-26 16:30:13,625 - DEBUG -   Pass: Eccentricity 1448157.0 < 1
+2025-09-26 16:30:13,626 - INFO - ---  END OF RUN - 2025-09-26 16:30:13  ---
 
