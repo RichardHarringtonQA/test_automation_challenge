@@ -26,3 +26,30 @@
 2025-09-26 17:34:30,410 - DEBUG - SQL result: [(69, 0, 0, '00011', 25, 266, '1448157')]
 2025-09-26 17:34:30,410 - INFO - ---  END OF RUN - 2025-09-26 17:34:30  ---
 
+2025-09-26 17:38:28,303 - INFO - ---  START OF RUN - 2025-09-26 17:38:28  ---
+2025-09-26 17:38:28,304 - DEBUG - ***test2***
+2025-09-26 17:38:28,304 - DEBUG - Check line1: length == 69...
+2025-09-26 17:38:28,304 - DEBUG -   Pass: Length = 69
+2025-09-26 17:38:28,304 - DEBUG - Expected value: 9
+2025-09-26 17:38:28,305 - DEBUG - Calculated value: 1
+2025-09-26 17:38:28,305 - DEBUG -   Fail: checksum expected 9 != calculated 1
+2025-09-26 17:38:28,305 - DEBUG - ***test3***
+2025-09-26 17:38:28,306 - DEBUG - Check line1: length == 69...
+2025-09-26 17:38:28,306 - ERROR -   Failed: Line 1 length !=69
+2025-09-26 17:38:28,306 - DEBUG - ***test1***
+2025-09-26 17:38:28,306 - DEBUG - Check line1: length == 69...
+2025-09-26 17:38:28,306 - DEBUG -   Pass: Length = 69
+2025-09-26 17:38:28,307 - DEBUG - Expected value: 0
+2025-09-26 17:38:28,307 - DEBUG - Calculated value: 0
+2025-09-26 17:38:28,307 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-26 17:38:28,307 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-26 17:38:28,308 - DEBUG -   Pass: Sat num = 00011
+2025-09-26 17:38:28,308 - DEBUG - Check Line 1 epoch year and day...
+2025-09-26 17:38:28,308 - DEBUG - 25266.56989994
+2025-09-26 17:38:28,309 - DEBUG -   Pass: valid epoch year 25
+2025-09-26 17:38:28,309 - DEBUG -   Pass: valid epoch day 266
+2025-09-26 17:38:28,309 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-26 17:38:28,309 - DEBUG -   Pass: Eccentricity 1448157.0 < 1
+2025-09-26 17:38:28,310 - DEBUG - SQL result: [(69, 0, 0, '00011', 25, 266, '1448157')]
+2025-09-26 17:38:28,312 - INFO - ---  END OF RUN - 2025-09-26 17:38:28  ---
+
