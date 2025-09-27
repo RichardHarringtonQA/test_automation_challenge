@@ -31,62 +31,88 @@ def log_footer():
     logger.info(f"---  END OF RUN - {run_timestamp}  ---\n")
 atexit.register(log_footer)
 
+# failure shortlist
+failureSL = []
 
-def validate_tle(line1, line2):
+def validate_tle(line1, line2, testID):
+    overall = True
+    line1length = len(line1)
+    initial_digit = None
+    calc_digit = None
+    sat_num = None
+    epoch_year = None
+    epoch_day = None
+    ecc_str_set = None
+    
     # Check line1: length == 69
     logger.debug("Check line1: length == 69...")
     if len(line1) != 69 :
-        logger.error("  Failed: Line 1 length !=69") # debug output
-        return False
+        failMSG=f"    Failed: {testID}: Line 1 length !=69"
+        logger.error(failMSG) # debug output
+        failureSL.append(failMSG)
+        overall = False
     else:
-        line1length = 69
         logger.debug("  Pass: Length = 69")
-    # Validate checksum
-    # last position (68) is modulo 10 checksum value
-    # add all values, ignore chars, except - = 1, divide sum by 10, remainder is checksum value
-    initial_digit = int(line1[68])
-    # note: this is starting at pos 68
-    logger.debug(f"Expected value: {initial_digit}")
-    calc_digit = sum(int(c) if c.isdigit() else (1 if c == '-' else 0) for c in line1[:68] ) % 10
-    # note: this is stop at pos 68, ie up to but not including pos 68
-    logger.debug(f"Calculated value: {calc_digit}")
-    if initial_digit != calc_digit:
-        logger.debug(f"  Fail: checksum expected {initial_digit} != calculated {calc_digit}")
-        return False
-    else:
-        logger.debug(f"  Pass: checksum expected {initial_digit} == calculated {calc_digit}")
-    
-    # line 1 starts with 5-digit number after line number
-    logger.debug("Check line 1 starts with 5-digit number after line number...")
-    # using flexible token matching, not strictly ideal, but good practice
-    sat_num_match = re.search(r"^.+?\s+(\d{5})", line1)
-    # logger.debug(sat_num_match) # debug regex match
-    if sat_num_match:
-        sat_num = sat_num_match.group(1) # extract 5 digit number
-        logger.debug(f"  Pass: Sat num = {sat_num}")
-    else :
-        logger.error("  Failed: Second token invalid sat num.") # debug output
-        return False
-        
-    # Validate Epoch Year and Day
-    logger.debug("Check Line 1 epoch year and day...")
-    # position 18-32
-    epoch = line1[18:32].strip()
-    # debug
-    logger.debug(epoch)
-    # 2 digit year followed by 3 digit day increment with partial day decimal
-    epoch_year = int(epoch[:2])
-    if epoch_year > 56 or epoch_year < 26:
-        logger.debug(f"  Pass: valid epoch year {epoch_year}")
-    else:
-        logger.debug(f"  Fail: invalid epoch year {epoch_year}")
-        return False
-    epoch_day = int(epoch[2:5])
-    if epoch_day > 0 and epoch_day < 357:
-        logger.debug(f"  Pass: valid epoch day {epoch_day}")
-    else:
-        logger.debug(f"  Fail: invalid epoch day {epoch_day}")
-        return False    
+        # Validate checksum
+        # last position (68) is modulo 10 checksum value
+        # add all values, ignore chars, except - = 1, divide sum by 10, remainder is checksum value
+        try:
+            initial_digit = int(line1[68])
+            # note: this is starting at pos 68
+            logger.debug(f"Expected value: {initial_digit}")
+            calc_digit = sum(int(c) if c.isdigit() else (1 if c == '-' else 0) for c in line1[:68] ) % 10
+            # note: this is stop at pos 68, ie up to but not including pos 68
+            logger.debug(f"Calculated value: {calc_digit}")
+            if initial_digit != calc_digit:
+                failMSG=f"    Failed: {testID}: checksum expected {initial_digit} != calculated {calc_digit}"
+                logger.error(failMSG) # debug output
+                failureSL.append(failMSG)
+                overall = False
+            else:
+                logger.debug(f"  Pass: checksum expected {initial_digit} == calculated {calc_digit}")
+        except ValueError:
+            failMSG=f"    Failed: {testID}: could not extract checksum digit"
+            logger.error(failMSG) # debug output
+            failureSL.append(failMSG)
+            overall = False
+            
+        # line 1 starts with 5-digit number after line number
+        logger.debug("Check line 1 starts with 5-digit number after line number...")
+        # using flexible token matching, not strictly ideal, but good practice
+        sat_num_match = re.search(r"^.+?\s+(\d{5})", line1)
+        # logger.debug(sat_num_match) # debug regex match
+        if sat_num_match:
+            sat_num = sat_num_match.group(1) # extract 5 digit number
+            logger.debug(f"  Pass: Sat num = {sat_num}")
+        else :
+            failMSG=f"    Failed: {testID}: Second token invalid sat num."
+            logger.error(failMSG) # debug output
+            failureSL.append(failMSG)
+            overall = False
+            
+        # Validate Epoch Year and Day
+        logger.debug("Check Line 1 epoch year and day...")
+        # position 18-32
+        epoch = line1[18:32].strip()
+        # debug
+        logger.debug(epoch)
+        # 2 digit year followed by 3 digit day increment with partial day decimal
+        epoch_year = int(epoch[:2])
+        if epoch_year > 56 or epoch_year < 26:
+            logger.debug(f"  Pass: valid epoch year {epoch_year}")
+        else:
+            failMSG=f"    Failed: {testID}: invalid epoch year {epoch_year}"
+            logger.error(failMSG) # debug output
+            failureSL.append(failMSG)
+            overall = False
+        epoch_day = int(epoch[2:5])
+        if epoch_day > 0 and epoch_day < 357:
+            logger.debug(f"  Pass: valid epoch day {epoch_day}")
+        else:
+            failMSG=f"    Failed: {testID}: invalid epoch day {epoch_day}"
+            logger.error(failMSG) # debug output
+            failureSL.append(failMSG)
+            overall = False
     
     logger.debug("Check line2: eccentricity (5th token) < 1.0")
     """
@@ -110,22 +136,35 @@ def validate_tle(line1, line2):
         if ecc_val == ecc_int:
             logger.debug(f"  Pass: Eccentricity {ecc_val} < 1")
         else:
-            logger.error(f"  Failed: Eccentricity {ecc_val} is invalid")
-            return False
+            failMSG=f"    Failed: {testID}: Eccentricity {ecc_val} is invalid"
+            logger.error(failMSG) # debug output
+            failureSL.append(failMSG)
+            overall = False
     except ValueError:
-        logger.error("  Failed: could not convert extracted string to float value")
-        return False
+        failMSG="    Failed: {testID}: could not convert eccentricity extracted string to float value"
+        logger.error(failMSG) # debug output
+        failureSL.append(failMSG)
+        overall = False
         
     # make a temp SQL table
     with sqlite3.connect(':memory:') as myDB:
         myDB.execute('CREATE TABLE TLE_Values (line1length int, line1checkSumVal int, line1checkSumCalc int, satNum TEXT, epochYr int, epochDay int, line2Ecc TEXT)')
         # insert extracted values
-        myDB.execute('INSERT INTO TLE_Values (line1length, line1checkSumVal, line1checkSumCalc, satNum, epochYr, epochDay, line2Ecc) VALUES (?, ?, ?, ?, ?, ?, ?)', (line1length, initial_digit, calc_digit, sat_num, epoch_year, epoch_day, ecc_str_set))
-        # output table values
-        cursor = myDB.execute('SELECT * FROM TLE_Values;')
-        result = cursor.fetchall()
+        try:
+            myDB.execute('INSERT INTO TLE_Values (line1length, line1checkSumVal, line1checkSumCalc, satNum, epochYr, epochDay, line2Ecc) VALUES (?, ?, ?, ?, ?, ?, ?)', (line1length, initial_digit, calc_digit, sat_num, epoch_year, epoch_day, ecc_str_set))
+            # output table values
+            tempTable = myDB.execute('SELECT * FROM TLE_Values;')
+            result = tempTable.fetchall()
+        except sqlite3.Error as e:
+            failMSG = f"Failed: {test_id}: could not write to SQL table: {str(e)}"
+            logger.error(failMSG) # debug output
+            failureSL.append(failMSG)
+            overall = False            
         logger.debug(f"SQL result: {result}")
-        return bool(result)
+        
+    logger.debug(f"Overall: {overall}")
+    logger.info("\n".join(failureSL))
+    return overall
 
     
 class TestTLEValidator(unittest.TestCase):
@@ -133,20 +172,20 @@ class TestTLEValidator(unittest.TestCase):
         logger.debug("***test1***")
         line1 = "1 00011U 59001A   25266.56989994  .00000842  00000-0  43621-3 0  9990"   # Valid line1
         line2 = "2 00011  32.8735  13.8888 1448157 340.0672  14.8534 11.90033149503789"   # Valid line2
-        self.assertTrue(validate_tle(line1, line2))
+        self.assertTrue(validate_tle(line1, line2,"Test1"))
 
     def test_invalid_ecc(self):
         logger.debug("***test2***")
         line1 = "1 25544U 98067A   25268.12345678  .00002182  00000-0  12345-4 0  9999"
         line2 = "2 25544  51.6456 123.4567 0001234 123.4567 234.5678 15.12345678123456"   # Modified ecc >1
         line2 = line2.replace("0001234", "2.1234567")  # Invalid ecc = 2.12
-        self.assertFalse(validate_tle(line1, line2))
+        self.assertFalse(validate_tle(line1, line2,"Test2"))
 
     def test_invalid_line1(self):
         logger.debug("***test3***")
         line1 = "Invalid line1"   # Too short
         line2 = "2 25544  51.6456 123.4567 0001234 123.4567 234.5678 15.12345678123456"
-        self.assertFalse(validate_tle(line1, line2))
+        self.assertFalse(validate_tle(line1, line2,"Test3"))
 
 """
 actual valid examples:
