@@ -4,7 +4,7 @@ This repository contains a beginner-level test automation project to demonstrate
 
 ## Project Overview
 - **Python Unit Test Scripting**: A set of Python unit tests to validate simulated TLE data inputs.
-- 	- Includes: data extraction and verification, regex, logging, and SQL table creation and query output.
+	- Includes: data extraction and verification, regex, logging, SQL table creation / population / extraction, and multi-function modularity.
 - **Web Test**: A Robot Framework test using SeleniumLibrary to verify the title of a webpage (https://www.example.com).
 - **API Test**: A Postman collection to test a public API endpoint (https://jsonplaceholder.typicode.com/posts/1).
 
