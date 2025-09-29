@@ -49,3 +49,305 @@
     Failed: Test3: Line 1 length !=69
 2025-09-27 13:43:25,648 - INFO - ---  END OF RUN - 2025-09-27 13:43:25  ---
 
+2025-09-27 16:00:08,166 - INFO - ---  START OF RUN - 2025-09-27 16:00:08  ---
+2025-09-27 16:00:08,167 - DEBUG - ***test2***
+2025-09-27 16:00:08,167 - DEBUG - Check line1: length == 69...
+2025-09-27 16:00:08,167 - DEBUG -   Pass: Length = 69
+2025-09-27 16:00:08,168 - DEBUG - Check line2: length == 69...
+2025-09-27 16:00:08,168 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:00:08,168 - DEBUG - Expected value: 9
+2025-09-27 16:00:08,168 - DEBUG - Calculated value: 1
+2025-09-27 16:00:08,168 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:00:08,169 - DEBUG - ***test3***
+2025-09-27 16:00:08,169 - DEBUG - Check line1: length == 69...
+2025-09-27 16:00:08,169 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:00:08,169 - DEBUG - Check line2: length == 69...
+2025-09-27 16:00:08,169 - DEBUG -   Pass: Length = 69
+2025-09-27 16:00:08,169 - ERROR -     Failed: Test3: invalid line 1 length: 13
+2025-09-27 16:00:08,170 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:00:08,171 - DEBUG - ***test1***
+2025-09-27 16:00:08,171 - DEBUG - Check line1: length == 69...
+2025-09-27 16:00:08,171 - DEBUG -   Pass: Length = 69
+2025-09-27 16:00:08,172 - DEBUG - Check line2: length == 69...
+2025-09-27 16:00:08,172 - DEBUG -   Pass: Length = 69
+2025-09-27 16:00:08,172 - DEBUG - Expected value: 0
+2025-09-27 16:00:08,172 - DEBUG - Calculated value: 0
+2025-09-27 16:00:08,172 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:00:08,173 - INFO - ---  END OF RUN - 2025-09-27 16:00:08  ---
+
+2025-09-27 16:01:12,317 - INFO - ---  START OF RUN - 2025-09-27 16:01:12  ---
+2025-09-27 16:01:12,318 - DEBUG - ***test2***
+2025-09-27 16:01:12,318 - DEBUG - Check line1: length == 69...
+2025-09-27 16:01:12,318 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:12,318 - DEBUG - Check line2: length == 69...
+2025-09-27 16:01:12,319 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:01:12,319 - DEBUG - Expected value: 9
+2025-09-27 16:01:12,319 - DEBUG - Calculated value: 1
+2025-09-27 16:01:12,319 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:01:12,320 - DEBUG - ***test3***
+2025-09-27 16:01:12,320 - DEBUG - Check line1: length == 69...
+2025-09-27 16:01:12,320 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:01:12,320 - DEBUG - Check line2: length == 69...
+2025-09-27 16:01:12,320 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:12,320 - ERROR -     Failed: Test3: invalid line 1 length: 13
+2025-09-27 16:01:12,321 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:01:12,321 - DEBUG - ***test1***
+2025-09-27 16:01:12,321 - DEBUG - Check line1: length == 69...
+2025-09-27 16:01:12,322 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:12,322 - DEBUG - Check line2: length == 69...
+2025-09-27 16:01:12,322 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:12,322 - DEBUG - Expected value: 0
+2025-09-27 16:01:12,322 - DEBUG - Calculated value: 0
+2025-09-27 16:01:12,322 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:01:12,324 - INFO - ---  END OF RUN - 2025-09-27 16:01:12  ---
+
+2025-09-27 16:01:12,324 - INFO -     Failed: Test2: Line 2 length !=69
+    Failed: Test2: checksum expected 9 != calculated 1
+    Failed: Test3: Line 1 length !=69
+    Failed: Test3: invalid line 1 length: 13
+2025-09-27 16:01:55,117 - INFO - ---  START OF RUN - 2025-09-27 16:01:55  ---
+2025-09-27 16:01:55,117 - DEBUG - ***test2***
+2025-09-27 16:01:55,118 - DEBUG - Check line1: length == 69...
+2025-09-27 16:01:55,118 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:55,118 - DEBUG - Check line2: length == 69...
+2025-09-27 16:01:55,118 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:01:55,118 - DEBUG - Expected value: 9
+2025-09-27 16:01:55,118 - DEBUG - Calculated value: 1
+2025-09-27 16:01:55,119 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:01:55,120 - DEBUG - ***test3***
+2025-09-27 16:01:55,120 - DEBUG - Check line1: length == 69...
+2025-09-27 16:01:55,120 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:01:55,120 - DEBUG - Check line2: length == 69...
+2025-09-27 16:01:55,120 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:55,120 - ERROR -     Failed: Test3: invalid line 1 length: 13
+2025-09-27 16:01:55,120 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:01:55,121 - DEBUG - ***test1***
+2025-09-27 16:01:55,121 - DEBUG - Check line1: length == 69...
+2025-09-27 16:01:55,121 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:55,121 - DEBUG - Check line2: length == 69...
+2025-09-27 16:01:55,121 - DEBUG -   Pass: Length = 69
+2025-09-27 16:01:55,122 - DEBUG - Expected value: 0
+2025-09-27 16:01:55,122 - DEBUG - Calculated value: 0
+2025-09-27 16:01:55,122 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:01:55,123 - INFO - 
+---  END OF RUN - 2025-09-27 16:01:55  ---
+
+2025-09-27 16:01:55,123 - INFO -     Failed: Test2: Line 2 length !=69
+    Failed: Test2: checksum expected 9 != calculated 1
+    Failed: Test3: Line 1 length !=69
+    Failed: Test3: invalid line 1 length: 13
+2025-09-27 16:05:01,499 - INFO - ---  START OF RUN - 2025-09-27 16:05:01  ---
+2025-09-27 16:05:01,499 - DEBUG - ***test2***
+2025-09-27 16:05:01,499 - DEBUG - Check line1: length == 69...
+2025-09-27 16:05:01,500 - DEBUG -   Pass: Length = 69
+2025-09-27 16:05:01,500 - DEBUG - Check line2: length == 69...
+2025-09-27 16:05:01,500 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:05:01,500 - DEBUG - Expected value: 9
+2025-09-27 16:05:01,500 - DEBUG - Calculated value: 1
+2025-09-27 16:05:01,500 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:05:01,501 - DEBUG - ***test3***
+2025-09-27 16:05:01,501 - DEBUG - Check line1: length == 69...
+2025-09-27 16:05:01,502 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:05:01,502 - DEBUG - Check line2: length == 69...
+2025-09-27 16:05:01,502 - DEBUG -   Pass: Length = 69
+2025-09-27 16:05:01,502 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:05:01,502 - DEBUG - ***test1***
+2025-09-27 16:05:01,503 - DEBUG - Check line1: length == 69...
+2025-09-27 16:05:01,503 - DEBUG -   Pass: Length = 69
+2025-09-27 16:05:01,503 - DEBUG - Check line2: length == 69...
+2025-09-27 16:05:01,503 - DEBUG -   Pass: Length = 69
+2025-09-27 16:05:01,503 - DEBUG - Expected value: 0
+2025-09-27 16:05:01,503 - DEBUG - Calculated value: 0
+2025-09-27 16:05:01,503 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:05:01,504 - INFO - 
+---  END OF RUN - 2025-09-27 16:05:01  ---
+
+2025-09-27 16:05:01,504 - INFO -     Failed: Test2: Line 2 length !=69
+    Failed: Test2: checksum expected 9 != calculated 1
+    Failed: Test3: Line 1 length !=69
+2025-09-27 16:07:42,557 - INFO - ---  START OF RUN - 2025-09-27 16:07:42  ---
+2025-09-27 16:07:42,558 - DEBUG - ***test2***
+2025-09-27 16:07:42,558 - DEBUG - Check line1: length == 69...
+2025-09-27 16:07:42,558 - DEBUG -   Pass: Length = 69
+2025-09-27 16:07:42,558 - DEBUG - Check line2: length == 69...
+2025-09-27 16:07:42,559 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:07:42,559 - DEBUG - Expected value: 9
+2025-09-27 16:07:42,559 - DEBUG - Calculated value: 1
+2025-09-27 16:07:42,559 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:07:42,559 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:07:42,559 - DEBUG -   Pass: Sat num = 25544
+2025-09-27 16:07:42,559 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:07:42,559 - DEBUG - Epoch is: 25268.12345678
+2025-09-27 16:07:42,559 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:07:42,559 - DEBUG -   Pass: valid epoch day: 268
+2025-09-27 16:07:42,560 - DEBUG - ***test3***
+2025-09-27 16:07:42,560 - DEBUG - Check line1: length == 69...
+2025-09-27 16:07:42,560 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:07:42,560 - DEBUG - Check line2: length == 69...
+2025-09-27 16:07:42,561 - DEBUG -   Pass: Length = 69
+2025-09-27 16:07:42,561 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:07:42,561 - ERROR -     Failed: Test3: could not convert eccentricity extracted string to float value
+2025-09-27 16:07:42,561 - DEBUG - SQL result: [('Test3', 13, None, None, None, None, None)]
+2025-09-27 16:07:42,561 - DEBUG - ***test1***
+2025-09-27 16:07:42,562 - DEBUG - Check line1: length == 69...
+2025-09-27 16:07:42,562 - DEBUG -   Pass: Length = 69
+2025-09-27 16:07:42,562 - DEBUG - Check line2: length == 69...
+2025-09-27 16:07:42,562 - DEBUG -   Pass: Length = 69
+2025-09-27 16:07:42,562 - DEBUG - Expected value: 0
+2025-09-27 16:07:42,562 - DEBUG - Calculated value: 0
+2025-09-27 16:07:42,562 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:07:42,562 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:07:42,562 - DEBUG -   Pass: Sat num = 00011
+2025-09-27 16:07:42,562 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:07:42,562 - DEBUG - Epoch is: 25266.56989994
+2025-09-27 16:07:42,562 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:07:42,563 - DEBUG -   Pass: valid epoch day: 266
+2025-09-27 16:07:42,564 - INFO - 
+---  END OF RUN - 2025-09-27 16:07:42  ---
+
+2025-09-27 16:07:42,565 - INFO -     Failed: Test2: Line 2 length !=69
+    Failed: Test2: checksum expected 9 != calculated 1
+    Failed: Test3: Line 1 length !=69
+    Failed: Test3: could not convert eccentricity extracted string to float value
+2025-09-27 16:08:40,909 - INFO - ---  START OF RUN - 2025-09-27 16:08:40  ---
+2025-09-27 16:08:40,910 - DEBUG - ***test2***
+2025-09-27 16:08:40,910 - DEBUG - Check line1: length == 69...
+2025-09-27 16:08:40,910 - DEBUG -   Pass: Length = 69
+2025-09-27 16:08:40,910 - DEBUG - Check line2: length == 69...
+2025-09-27 16:08:40,910 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:08:40,910 - DEBUG - Expected value: 9
+2025-09-27 16:08:40,910 - DEBUG - Calculated value: 1
+2025-09-27 16:08:40,910 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:08:40,910 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:08:40,911 - DEBUG -   Pass: Sat num = 25544
+2025-09-27 16:08:40,911 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:08:40,911 - DEBUG - Epoch is: 25268.12345678
+2025-09-27 16:08:40,911 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:08:40,911 - DEBUG -   Pass: valid epoch day: 268
+2025-09-27 16:08:40,911 - DEBUG - SQL result: [('Test2', 69, 9, '1', 25544, 25, '268')]
+2025-09-27 16:08:40,912 - DEBUG - ***test3***
+2025-09-27 16:08:40,912 - DEBUG - Check line1: length == 69...
+2025-09-27 16:08:40,912 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:08:40,912 - DEBUG - Check line2: length == 69...
+2025-09-27 16:08:40,912 - DEBUG -   Pass: Length = 69
+2025-09-27 16:08:40,912 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:08:40,912 - ERROR -     Failed: Test3: could not convert eccentricity extracted string to float value
+2025-09-27 16:08:40,912 - DEBUG - SQL result: [('Test3', 13, None, None, None, None, None)]
+2025-09-27 16:08:40,912 - DEBUG - ***test1***
+2025-09-27 16:08:40,913 - DEBUG - Check line1: length == 69...
+2025-09-27 16:08:40,913 - DEBUG -   Pass: Length = 69
+2025-09-27 16:08:40,913 - DEBUG - Check line2: length == 69...
+2025-09-27 16:08:40,913 - DEBUG -   Pass: Length = 69
+2025-09-27 16:08:40,913 - DEBUG - Expected value: 0
+2025-09-27 16:08:40,913 - DEBUG - Calculated value: 0
+2025-09-27 16:08:40,913 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:08:40,913 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:08:40,913 - DEBUG -   Pass: Sat num = 00011
+2025-09-27 16:08:40,913 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:08:40,913 - DEBUG - Epoch is: 25266.56989994
+2025-09-27 16:08:40,913 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:08:40,914 - DEBUG -   Pass: valid epoch day: 266
+2025-09-27 16:08:40,914 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:08:40,914 - DEBUG -   Pass: Eccentricity 989994.0 < 1
+2025-09-27 16:08:40,914 - DEBUG - SQL result: [('Test1', 69, 0, '0', 11, 25, '266')]
+2025-09-27 16:08:40,915 - INFO - 
+---  END OF RUN - 2025-09-27 16:08:40  ---
+
+2025-09-27 16:08:40,915 - INFO -     Failed: Test2: Line 2 length !=69
+    Failed: Test2: checksum expected 9 != calculated 1
+    Failed: Test3: Line 1 length !=69
+    Failed: Test3: could not convert eccentricity extracted string to float value
+2025-09-27 16:10:04,824 - INFO - ---  START OF RUN - 2025-09-27 16:10:04  ---
+2025-09-27 16:10:04,824 - DEBUG - ***test2***
+2025-09-27 16:10:04,824 - DEBUG - Check line1: length == 69...
+2025-09-27 16:10:04,824 - DEBUG -   Pass: Length = 69
+2025-09-27 16:10:04,824 - DEBUG - Check line2: length == 69...
+2025-09-27 16:10:04,825 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:10:04,825 - DEBUG - Expected value: 9
+2025-09-27 16:10:04,825 - DEBUG - Calculated value: 1
+2025-09-27 16:10:04,825 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:10:04,825 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:10:04,825 - DEBUG -   Pass: Sat num = 25544
+2025-09-27 16:10:04,825 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:10:04,825 - DEBUG - Epoch is: 25268.12345678
+2025-09-27 16:10:04,825 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:10:04,825 - DEBUG -   Pass: valid epoch day: 268
+2025-09-27 16:10:04,826 - DEBUG - SQL result: [('Test2', 69, 9, '1', 25544, 25, '268')]
+2025-09-27 16:10:04,826 - DEBUG - ***test3***
+2025-09-27 16:10:04,826 - DEBUG - Check line1: length == 69...
+2025-09-27 16:10:04,826 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:10:04,826 - DEBUG - Check line2: length == 69...
+2025-09-27 16:10:04,826 - DEBUG -   Pass: Length = 69
+2025-09-27 16:10:04,827 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:10:04,827 - DEBUG -   Pass: Eccentricity 1234.0 < 1
+2025-09-27 16:10:04,827 - DEBUG - SQL result: [('Test3', 13, None, None, None, None, None)]
+2025-09-27 16:10:04,827 - DEBUG - ***test1***
+2025-09-27 16:10:04,827 - DEBUG - Check line1: length == 69...
+2025-09-27 16:10:04,827 - DEBUG -   Pass: Length = 69
+2025-09-27 16:10:04,827 - DEBUG - Check line2: length == 69...
+2025-09-27 16:10:04,827 - DEBUG -   Pass: Length = 69
+2025-09-27 16:10:04,827 - DEBUG - Expected value: 0
+2025-09-27 16:10:04,828 - DEBUG - Calculated value: 0
+2025-09-27 16:10:04,828 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:10:04,828 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:10:04,828 - DEBUG -   Pass: Sat num = 00011
+2025-09-27 16:10:04,828 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:10:04,828 - DEBUG - Epoch is: 25266.56989994
+2025-09-27 16:10:04,828 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:10:04,828 - DEBUG -   Pass: valid epoch day: 266
+2025-09-27 16:10:04,828 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:10:04,828 - DEBUG -   Pass: Eccentricity 1448157.0 < 1
+2025-09-27 16:10:04,829 - DEBUG - SQL result: [('Test1', 69, 0, '0', 11, 25, '266')]
+2025-09-27 16:10:04,830 - INFO - 
+---  END OF RUN - 2025-09-27 16:10:04  ---
+
+2025-09-27 16:10:04,830 - INFO -     Failed: Test2: Line 2 length !=69
+    Failed: Test2: checksum expected 9 != calculated 1
+    Failed: Test3: Line 1 length !=69
+2025-09-27 16:22:13,944 - INFO - ---  START OF RUN - 2025-09-27 16:22:13  ---
+2025-09-27 16:22:13,945 - DEBUG - ***test2***
+2025-09-27 16:22:13,945 - DEBUG - Check line1: length == 69...
+2025-09-27 16:22:13,945 - DEBUG -   Pass: Length = 69
+2025-09-27 16:22:13,946 - DEBUG - Check line2: length == 69...
+2025-09-27 16:22:13,946 - ERROR -     Failed: Test2: Line 2 length !=69
+2025-09-27 16:22:13,946 - DEBUG - Expected value: 9
+2025-09-27 16:22:13,946 - DEBUG - Calculated value: 1
+2025-09-27 16:22:13,946 - ERROR -     Failed: Test2: checksum expected 9 != calculated 1
+2025-09-27 16:22:13,946 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:22:13,947 - DEBUG -   Pass: Sat num = 25544
+2025-09-27 16:22:13,947 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:22:13,947 - DEBUG - Epoch is: 25268.12345678
+2025-09-27 16:22:13,947 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:22:13,947 - DEBUG -   Pass: valid epoch day: 268
+2025-09-27 16:22:13,948 - DEBUG - SQL result: [('Test2', 69, 9, '1', 25544, 25, '268')]
+2025-09-27 16:22:13,948 - DEBUG - ***test3***
+2025-09-27 16:22:13,948 - DEBUG - Check line1: length == 69...
+2025-09-27 16:22:13,949 - ERROR -     Failed: Test3: Line 1 length !=69
+2025-09-27 16:22:13,949 - DEBUG - Check line2: length == 69...
+2025-09-27 16:22:13,949 - DEBUG -   Pass: Length = 69
+2025-09-27 16:22:13,949 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:22:13,949 - DEBUG -   Pass: Eccentricity 1234.0 < 1
+2025-09-27 16:22:13,950 - DEBUG - SQL result: [('Test3', 13, None, None, None, None, None)]
+2025-09-27 16:22:13,950 - DEBUG - ***test1***
+2025-09-27 16:22:13,950 - DEBUG - Check line1: length == 69...
+2025-09-27 16:22:13,951 - DEBUG -   Pass: Length = 69
+2025-09-27 16:22:13,951 - DEBUG - Check line2: length == 69...
+2025-09-27 16:22:13,951 - DEBUG -   Pass: Length = 69
+2025-09-27 16:22:13,951 - DEBUG - Expected value: 0
+2025-09-27 16:22:13,951 - DEBUG - Calculated value: 0
+2025-09-27 16:22:13,951 - DEBUG -   Pass: checksum expected 0 == calculated 0
+2025-09-27 16:22:13,952 - DEBUG - Check line 1 starts with 5-digit number after line number...
+2025-09-27 16:22:13,952 - DEBUG -   Pass: Sat num = 00011
+2025-09-27 16:22:13,952 - DEBUG - Check Line 1 epoch year and day...
+2025-09-27 16:22:13,952 - DEBUG - Epoch is: 25266.56989994
+2025-09-27 16:22:13,952 - DEBUG -   Pass: valid epoch year: 25
+2025-09-27 16:22:13,952 - DEBUG -   Pass: valid epoch day: 266
+2025-09-27 16:22:13,952 - DEBUG - Check line2: eccentricity (5th token) < 1.0
+2025-09-27 16:22:13,952 - DEBUG -   Pass: Eccentricity 1448157.0 < 1
+2025-09-27 16:22:13,953 - DEBUG - SQL result: [('Test1', 69, 0, '0', 11, 25, '266')]
+2025-09-27 16:22:13,953 - INFO - 
+---  END OF RUN - 2025-09-27 16:22:13  ---
+
+2025-09-27 16:22:13,953 - INFO -     Failed: Test2: Line 2 length !=69
+    Failed: Test2: checksum expected 9 != calculated 1
+    Failed: Test3: Line 1 length !=69
